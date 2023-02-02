@@ -1,1 +1,242 @@
-ECHO is on.
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #F9F9F9;
+    --text-color:#FFFFFF;
+    --blue: #046EA8;
+    --light-grey:#424040;
+    --dark-grey: #333333;
+    --black:#000000;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    background: var(--text-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 124px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 130px;
+    z-index: 1000;
+  
+}
+
+.logo img{
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+}
+
+#menu-icon{
+    font-size: 2rem;
+    color:var(--black);
+    cursor: pointer;
+    display: none;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 363px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.42);
+    box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.search-bx{
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    
+}
+
+.search-bx input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.58);
+
+}
+
+
+.search-bx input::placeholder{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.58);
+}
+
+
+button[type="submit"]{
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-color: var(--text-color);
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 5px;
+}
+
+
+.navbar{
+    display:flex;
+ 
+}
+
+.navbar li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: var(--black);
+    gap: 2px;
+    font-size: 10px;
+}
+
+
+.navbar li a{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--black);
+    transition: all .35s ease;
+}
+.navbar li a:hover{
+    color: var(--blue);
+    
+}
+
+.navbar li a:last-child{
+    color: var(--text-color);
+    background-color: var(--blue);
+    padding: 15px;
+    border-radius: 0.6rem;
+}
+
+.navbar li a:last-child:hover{
+    border: 2px solid var(--blue);
+    background-color: var(--bg-color);
+    color: var(--black);
+   
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    background-image: url(../img/main.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 120px 10%;
+    margin-top: 8%
+    }
+
+.site-content{
+    display:flex;
+    flex-direction:column;
+    gap: 20px;
+    
+}
+.site-content span{
+    font-weight: 500;
+   font-size: 47px;
+   line-height: 57px;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+}
+
+.site-content p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 1px;
+}
+
+.main-btn{
+    display: inline-block;
+    color: var(--text-color);
+    background-color: var(--blue);
+    padding: 15px 30px;
+    border-radius: 0.6rem;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.main-btn:hover{
+    transform: scale(1.0) translateY(10px);
+    transition: .4s;
+}
+
+/* marquee slider*/
+.marquee{
+    padding:0px  10%;
+}
+
+.marquee-content{
+    display: flex;
+    gap: 10px;
+    animation: scrolling 4s linear infinite;
+
+}
+
+.marquee-item{
+    width: 150px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center
+}
+
+.marquee-item img{
+    width: 100%;
+    display: block;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translatex(10%);
+    }
+
+}
