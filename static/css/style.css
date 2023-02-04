@@ -124,6 +124,7 @@ button[type="submit"]{
 
 
 .navbar li a{
+    display: block;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 13px;
@@ -136,19 +137,49 @@ button[type="submit"]{
     
 }
 
-.navbar li a:last-child{
+.advise-btn{
     color: var(--text-color);
     background-color: var(--blue);
     padding: 15px;
     border-radius: 0.6rem;
 }
 
-.navbar li a:last-child:hover{
+
+.advise-btn:hover{
     border: 2px solid var(--blue);
     background-color: var(--bg-color);
     color: var(--black);
-   
+    
 }
+
+
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #f9f9f9;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all .35s ease;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
 main{
     display: flex;
     justify-content: center;
@@ -270,7 +301,7 @@ section{
 .home .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, auto));
-    gap: 1rem;
+    gap: 5rem;
     margin-top: 10%;
 }
 
@@ -325,21 +356,19 @@ section{
     font-weight: 700;
  }
  
+/* Testimonial section */
+
 
  .testimonial{
     background-color: var(--blue);
  }
 
 
- .testimonial-content{
-    padding: 10px;
-    margin-top: 10%;
-   
- }
-
 .testimonial-body{
     position: relative;
     overflow: hidden;
+    margin-top: 10%;
+    
 }
  .testimonial h2{
     color: var(--bg-color);
@@ -408,7 +437,7 @@ section{
 
 /* swiper button css */
 
-.nav-btn {
+/* .nav-btn {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -419,31 +448,137 @@ section{
   .nav-btn:hover {
     background-color: rgba(0, 0, 0, 0.2);
   }
+*/
   .nav-btn::after,
   .nav-btn::before {
     font-size: 20px;
     color: #fff;
-  }
+  } 
+
+
   .swiper-pagination-bullet {
     background-color: rgba(0, 0, 0, 0.8);
   }
   .swiper-pagination-bullet-active {
-    background-color: #4070f4;
-  }
-  @media screen and (max-width: 768px) {
-    .slide p {
-      padding: 0 20px;
-    }
-    .nav-btn {
-      display: none;
-    }
+    background-color: var(--blue);
   }
 
-  @media (max-width:720px) {
-    .nav-btn{
-        display:none;
+.footer{
+    background-color: var(--black);
+}
+  
+.footer-body{
+    padding: 10px 0;
+}
+
+ .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 25%;
+}
+
+.col h4{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.col h4::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -8px;
+    background: var(--blue);
+}
+
+.col ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+.col ul li a{
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+}
+
+.col ul li a:hover{
+    color: var(--blue);
+    transform:  translateX(-12px);
+}
+
+.col .social{
+    width:220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col .social a{
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.col .social a:hover{
+    transform: scale(1.2);
+    color: var(--bg-color);
+    background: var(--blue);
+}
+
+.end-text {
+    color: var(--black);
+    text-align: center;
+    padding: 20px;
+}
+
+
+  /* large screen size : from 1140px to 1560px */
+@media (max-width:1560px){
+
+}
+/* small tablet to desktop screen : from 720px to 1140px */
+@media (max-width: 1330px) {
+    header{
+        padding:0;
     }
-  }
+    .col{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+}
+/* small phone screen to small tablet : from 575px to 720 */
+@media (max-width:720px) {
+ 
+    .slide p {
+        padding: 0 20px;
+      }
+      .nav-btn {
+        display: none;
+      }
+}
+/* small phone screen : from 0 to 575px */
+@media (max-width: 575px) {
+    .col{
+        width: 100%;
+    }
+
+}
+
 
 
 
