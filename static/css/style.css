@@ -57,7 +57,7 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 363px;
+    width: 300px;
     height: 38px;
     background: rgba(255, 255, 255, 0.42);
     box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, 0.25);
@@ -67,7 +67,7 @@ form{
 .search-bx{
     width: 100%;
     position: relative;
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
     
 }
 
@@ -100,10 +100,10 @@ button[type="submit"]{
     border: none;
     overflow: hidden;
     position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 12px;
-    right: 5px;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 10px;
 }
 
 
@@ -180,7 +180,7 @@ button[type="submit"]{
     display: block;
   }
   
-main{
+.main{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -189,27 +189,44 @@ main{
     background-position: center;
     background-size: cover;
     width: 100%;
+    /* height: 80vh; */
     padding: 120px 10%;
-    margin-top: 8%
+    margin-top: 8%;
+    position: relative;
+    z-index: 2;
     }
+
+.main::before{
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgb(41 45 54 / 51%)
+ 
+}
 
 .site-content{
     display:flex;
     flex-direction:column;
     gap: 20px;
+    z-index: 2;
     
 }
 .site-content span{
     font-weight: 600;
    font-size: 47px;
    line-height: 57px;
-   color: var(--blue);
+   color: var(--bg-color);
 }
 
 h1{
     font-weight: 500;
     font-size: 60px;
     line-height: 73px;
+    color: var(--blue);
 }
 
 h2{
@@ -234,6 +251,7 @@ h2{
     font-size: 18px;
     text-transform: uppercase;
     width: 200px;
+    z-index: 2;
 }
 
 .main-btn:hover{
@@ -548,13 +566,53 @@ section{
 
   /* large screen size : from 1140px to 1560px */
 @media (max-width:1560px){
-
+  
 }
-/* small tablet to desktop screen : from 720px to 1140px */
-@media (max-width: 1330px) {
+
+@media (max-width:1350px){
     header{
-        padding:0;
+        padding: 0 5px;
+        transition: .3s;
     }
+}
+
+/* small tablet to desktop screen : from 720px to 1140px */
+@media (max-width: 1140px) {
+    header{
+        padding: 0 20px;
+        transition: .3s;
+    }
+
+    form{
+        width: 500px;;
+    }
+    #menu-icon{
+        display: block;
+        color: var(--black);
+    }
+
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 280px;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: var(--bg-color);
+        transition:  all .45s ease;
+    }
+
+    header .navbar.active{
+        left: 0;
+    }
+
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+    }
+
     .col{
         width: 50%;
         margin-bottom: 10px;
@@ -563,7 +621,21 @@ section{
 }
 /* small phone screen to small tablet : from 575px to 720 */
 @media (max-width:720px) {
- 
+    header{
+        padding: 0 5px;
+        transition: .3s;
+    }
+    .main{
+        align-items: center;
+    }
+    
+    .site-content{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
     .slide p {
         padding: 0 20px;
       }
