@@ -614,6 +614,10 @@ section{
         
       }
 
+    .advise-btn{
+        width: 100%;
+    }
+
     .col{
         width: 50%;
         
@@ -631,9 +635,7 @@ section{
         transition: .3s;
     }
   
-    .advise-btn{
-        width: 100%;
-    }
+  
     .main{
         align-items: center;
         margin-top: 0;
