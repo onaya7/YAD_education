@@ -34,6 +34,7 @@ header{
     align-items: center;
     padding: 0px 130px;
     z-index: 1000;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   
 }
 
@@ -108,13 +109,16 @@ button[type="submit"]{
 
 
 .navbar{
-    display:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  
 }
 
 .navbar li{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     padding: 15px;
     color: var(--black);
@@ -131,6 +135,7 @@ button[type="submit"]{
     line-height: 16px;
     color: var(--black);
     transition: all .35s ease;
+    width: 100%;
 }
 .navbar li a:hover{
     color: var(--blue);
@@ -179,19 +184,18 @@ button[type="submit"]{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+
 .main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 100px;
+    gap: 1.5rem;
     background-image: url(../img/main3.png);
     background-position: center;
     background-size: cover;
     width: 100%;
-    /* height: 80vh; */
-    padding: 120px 10%;
-    margin-top: 8%;
+    height: 95vh;
+    padding:9% 10%;
     position: relative;
     z-index: 2;
     }
@@ -207,7 +211,7 @@ button[type="submit"]{
     background-color: rgb(41 45 54 / 51%)
  
 }
-
+/* carousel background */
 .site-content{
     display:flex;
     flex-direction:column;
@@ -375,15 +379,13 @@ section{
  }
  
 /* Testimonial section */
-
-
  .testimonial{
     background-color: var(--blue);
+    position: relative;
  }
 
 
 .testimonial-body{
-    position: relative;
     overflow: hidden;
     margin-top: 10%;
     
@@ -394,7 +396,6 @@ section{
     font-size: 35px;
     line-height: 43px;
     position: relative;
-    margin-bottom:30px;
 }
 
 .testimonial h2::before {
@@ -455,31 +456,12 @@ section{
 
 /* swiper button css */
 
-/* .nav-btn {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    transform: translateY(30px);
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: 0.2s;
-  }
-  .nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-*/
   .nav-btn::after,
   .nav-btn::before {
     font-size: 20px;
     color: #fff;
   } 
 
-
-  .swiper-pagination-bullet {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .swiper-pagination-bullet-active {
-    background-color: var(--blue);
-  }
 
 .footer{
     background-color: var(--black);
@@ -491,7 +473,7 @@ section{
 
  .container{
     display: flex;
-    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .col {
@@ -565,9 +547,7 @@ section{
 
 
   /* large screen size : from 1140px to 1560px */
-@media (max-width:1560px){
-  
-}
+
 
 @media (max-width:1350px){
     header{
@@ -584,14 +564,15 @@ section{
     }
 
     form{
-        width: 500px;;
+        width: 260px;
     }
     #menu-icon{
         display: block;
         color: var(--black);
     }
-
-     header .navbar{
+    
+  
+    .navbar{
         position: absolute;
         top: 100%;
         left: -100%;
@@ -606,16 +587,40 @@ section{
 
     header .navbar.active{
         left: 0;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
     }
 
     .navbar a{
         padding: 1.5rem;
         display: block;
     }
+    .dropdown {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+      }
+      .dropdown-content {
+        display: none;
+        position: static;
+        width: 100%;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        
+      }
 
     .col{
         width: 50%;
-        margin-bottom: 10px;
+        
+    }
+
+    .container{
+        flex-wrap: wrap;
     }
 
 }
@@ -625,8 +630,13 @@ section{
         padding: 0 5px;
         transition: .3s;
     }
+  
+    .advise-btn{
+        width: 100%;
+    }
     .main{
         align-items: center;
+        margin-top: 0;
     }
     
     .site-content{
@@ -635,16 +645,83 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 20px;
+    }
+
+    .site-content span{
+        font-size: 40px;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+    
+    h2{
+        font-size: 40px;
+    }
+
+    .site-content p{
+        font-size: 15px
+    }
+    
+    .main-btn{
+        text-align: center;
+        font-size: 13px;
+        padding: 15px 20px;
+        width: 150px
+    }
+    .testimonial-body{
+        margin-top: 30%;
     }
     .slide p {
         padding: 0 20px;
       }
-      .nav-btn {
+      
+      .swiper-button-next::after,
+      .swiper-button-prev::after{
         display: none;
       }
 }
 /* small phone screen : from 0 to 575px */
 @media (max-width: 575px) {
+    /* header{
+        height: 80px;
+    } */
+    .logo img{
+        width: 150px;
+        height: auto
+    }
+    .main{
+        padding: 0;
+    }
+    .site-content{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .site-content span{
+        font-size: 30px;
+    }
+    
+    h1{
+        font-size: 30px;
+    }
+    
+    h2{
+        font-size: 30px;
+    }
+    
+    .site-content p{
+        font-size: 10px
+    }
+
+    .main-btn{
+        text-align: center;
+        font-size: 10px;
+        padding: 15px 10px;
+    }
     .col{
         width: 100%;
     }
