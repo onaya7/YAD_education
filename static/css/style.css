@@ -185,6 +185,8 @@ button[type="submit"]{
     display: block;
   }
 
+ 
+
 .main{
     display: flex;
     justify-content: center;
@@ -429,6 +431,7 @@ section{
     font-size: 14px;
     font-weight:  400;
     color:var(--bg-color);
+    width: 500px;
 }
 
 .slide .quote-icon{
@@ -544,7 +547,99 @@ section{
     text-align: center;
     padding: 20px;
 }
+/* INDEX PAGE END  */
+/* ------------------------------------------------------------------------------ */
+/* UNIVERSITY PAGE */
+.uni-banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-image: url(../img/uni-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    padding:9% 10%;
+    position: relative;
+    z-index: 2;
+    }
 
+.uni-banner::before{
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #1b93d285;
+}
+
+.uni-banner-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+    margin-top: 10%
+}
+
+.uni-banner-content  h1{
+    color: var(--bg-color);
+    font-weight: 700;
+}
+
+.uni-banner-content p{
+    color: var(--bg-color);
+    font-weight: 500;
+}
+.uni-text{
+    color: var(--light-grey);
+    padding: 2% 10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.uni-text a{
+    color: var(--black);
+}
+.uni-text a.active{
+    color: var(--blue);
+    font-weight:600;
+}
+.uni-body{
+    padding: 2% 10%;
+}
+
+.search-bar form {
+    width: 100%;
+    box-shadow: none;
+    background-color: var(--blue);
+}
+
+.search-bar  input{
+    background-color: var(--blue);
+    color: var(--bg-color);
+}
+
+.search-bar button{
+    background: url(../img/search2.png);
+    background-color: var(--blue);
+}
+
+.search-bar input::placeholder{
+    color:var(--bg-color);
+}
+
+.card-container{
+    width: 100%;
+}
+
+
+/* UNIVERSITY PAGE END */
 
   /* large screen size : from 1140px to 1560px */
 
@@ -602,6 +697,7 @@ section{
         display: flex;
         align-items: center;
         justify-content: center;
+        width:100%;
     
       }
       .dropdown-content {
@@ -617,7 +713,7 @@ section{
     .advise-btn{
         width: 100%;
     }
-
+   
     .col{
         width: 50%;
         
@@ -638,7 +734,7 @@ section{
   
     .main{
         align-items: center;
-        margin-top: 0;
+        margin-top: 20px;
     }
     
     .site-content{
