@@ -691,7 +691,7 @@ section{
     padding: 30px 0;
 }
 
-.card a{
+.card-container .card a{
     color: var(--text-color);
     background-color: var(--blue);
     padding: 10px;
@@ -889,6 +889,9 @@ section{
         width: 100%;
     }
 
+    .uni-banner-content {
+        margin-top: 30%;
+    }
 }
 
 
