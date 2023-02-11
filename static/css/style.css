@@ -892,10 +892,15 @@ section{
     .uni-banner-content {
         margin-top: 30%;
     }
+
+    .uni-banner-content p {
+        font-size: 10px;
+    
+    }
+      
+
+
 }
-
-
-
 
 
 
