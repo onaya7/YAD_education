@@ -789,7 +789,55 @@ section{
 .socials span:hover{
     transform: scale(1.04) translateY(5px);
 }
+.about-body, .about-video{
+    background-color: #E2E2E2;
+}
+.about-body h2, .about-video h2{
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    position: relative;
+    margin-bottom:30px;
+}
 
+.about-body h2::before, .about-video h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 59px;
+    left: 0;
+    bottom: -50px;
+    background: var(--blue);
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 5% 20px;
+}
+
+.about-text p{
+    font-size: 12px;
+    color: var(--black);
+    letter-spacing:1px;
+    
+}
+
+.about-text p::selection{
+    color: var(--blue);
+}
+
+.video{
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 5% 20px;
+}
   /* large screen size : from 1140px to 1560px */
 
 
