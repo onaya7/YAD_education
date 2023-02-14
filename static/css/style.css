@@ -296,7 +296,7 @@ h2{
 }
 
 section{
-    padding:9% 10%;
+    padding:3% 10%;
 }
 
 .home{
@@ -660,6 +660,7 @@ section{
     transform: scale(1.04) translateY(-5px);
 }
 
+
 .card-img{
     width: 100%;
     height: 200px;
@@ -693,14 +694,18 @@ section{
 
 .card-container .card a{
     color: var(--text-color);
-    background-color: var(--blue);
+    background-color: var(--text-color);
+    border:2px solid var(--blue);
     padding: 10px;
     border-radius: 0.6rem;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     font-size: 12px;
+    color:black;
 }
+
+
 
 
 
@@ -716,18 +721,20 @@ section{
 }
 
 .overlay{
-    color: black;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    top: 0;
+    left: 0;
     width: 100%;
+    height:60vh;
+    background-color: #1f1a1a75;
 }
+
 .about img{
     width: 100%;
     height: 100%;
 
 }
+
 .about-img{
     width: 150px;
     height: 50px;
@@ -753,7 +760,6 @@ section{
     transform:translate(-50%, -50%);
     width: 100%;
     padding: 10%;
-    background-color: #00000075;
 }
 
 .about-content{
@@ -765,6 +771,7 @@ section{
 .about-content h2{
     color: var(--bg-color);
     font-size: 50px;
+    font-weight: 700;
 }
 
 .socials{
@@ -788,6 +795,7 @@ section{
 
 .socials span:hover{
     transform: scale(1.04) translateY(5px);
+    background-color: var(--blue);
 }
 .about-body, .about-video{
     background-color: #E2E2E2;
@@ -795,7 +803,7 @@ section{
 .about-body h2, .about-video h2{
     color: var(--dark-grey);
     font-weight: 500;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 43px;
     position: relative;
     margin-bottom:30px;
@@ -807,7 +815,7 @@ section{
     height: 2px;
     width: 59px;
     left: 0;
-    bottom: -50px;
+    bottom: -20px;
     background: var(--blue);
 }
 
@@ -820,7 +828,15 @@ section{
     border-radius: 10px;
     padding: 5% 20px;
 }
+.about-text span{
+    display:flex;
+    gap: 1rem;
+    align-items: center;
+}
 
+.about-text span i{
+    color: var(--black);
+}
 .about-text p{
     font-size: 12px;
     color: var(--black);
@@ -832,11 +848,24 @@ section{
     color: var(--blue);
 }
 
-.video{
+.video-body{
     width: 100%;
     background-color: var(--bg-color);
     border-radius: 10px;
     padding: 5% 20px;
+}
+
+
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.y-video{
+    width: 100%;
+    height: 100%;
 }
   /* large screen size : from 1140px to 1560px */
 
@@ -967,15 +996,16 @@ section{
     }
     .testimonial-body{
         margin-top: 30%;
+        margin-bottom:20px;
     }
-    .slide p {
-        padding: 0 20px;
-      }
+    
       
       .swiper-button-next::after,
       .swiper-button-prev::after{
         display: none;
+        
       }
+      
 }
 /* small phone screen : from 0 to 575px */
 @media (max-width: 575px) {
@@ -1017,6 +1047,14 @@ section{
         font-size: 10px;
         padding: 15px 10px;
     }
+
+    .home h2{
+        font-size:20px;
+    }
+
+    .testimonial h2{
+        font-size:20px;
+    }
     .col{
         width: 100%;
     }
@@ -1029,7 +1067,12 @@ section{
         font-size: 10px;
     
     }
-      
+    .about-container{
+        transform: translate(-50%, -45%);
+    }
+    .about-content h2 {
+        font-size: 20px;
+    }
 
 
 }
