@@ -958,6 +958,14 @@ iframe{
         width: 100%;
     }
    
+    .main{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10%;
+    }
+    
     .col{
         width: 50%;
         
