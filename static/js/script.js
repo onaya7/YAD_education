@@ -1,3 +1,14 @@
+// Preloader content
+
+window.addEventListener('load', function(){
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+  const content = document.getElementById('content');
+  content.style.display = 'block';
+});
+
+
+
 // initialize Swiper js
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -22,9 +33,10 @@ menu.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+
 window.onscroll = () => { 
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
+    // menu.classList.remove('bx-x');
+    // // navbar.classList.remove('active');
 };
 
 
