@@ -629,7 +629,7 @@ section{
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: #0000006e;
+    background-color: #113548bd;
 }
 
 .uni-banner-content{
@@ -648,7 +648,7 @@ section{
 }
 
 .uni-banner-content p{
-    color: #a6c1d1;
+    color: var(--bg-color);
     font-weight: 500;
 }
 .uni-text{
@@ -659,7 +659,7 @@ section{
     align-items: center
 }
 .uni-text a{
-    color: var(--text-color);
+    color: var(--dark-grey);
     font-size: 15px;
     z-index: 1;
     transition: .3s all ease;
