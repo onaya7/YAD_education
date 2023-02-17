@@ -1006,6 +1006,47 @@ iframe{
 .apply-content h2 span{
     color:var(--blue);
 }
+.apply-box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.apply-box{
+    width: 500px;
+    padding: 10px;
+}
+.apply-card{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.apply-card-text{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.apply-card-text h4{
+    font-size: 16px;
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+.apply-card-text .details p, .apply-card-text .details span{
+    font-size: 13px;
+    color: var(--light-grey)
+}
+
+.apply-card-text .details{
+    display:flex;
+    align-items: center;
+   gap: 0.5rem;
+}
+
+
 .apply-card-img{
     width: 150px;
     height: 150px;
