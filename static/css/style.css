@@ -1009,6 +1009,11 @@ iframe{
 }
 .apply-body{
     background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
 }
 .apply-box-container{
     display: flex;
@@ -1090,7 +1095,7 @@ iframe{
     
 }
 
-.apply-box-container .btn{
+.apply-body .btn{
     color: var(--text-color);
     background-color: #06486a;
     padding: 10px;
@@ -1103,7 +1108,7 @@ iframe{
     gap: 10px;
 }
 
-.apply-box-container .btn:hover{
+.apply-body .btn:hover{
     transform: scale(1.1) translateY(5px);
     transition: .4s;
 }
