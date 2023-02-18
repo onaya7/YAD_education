@@ -316,7 +316,7 @@ h2{
 }
 
 .main-btn:hover{
-    transform: scale(1.0) translateY(10px);
+    transform: scale(1.1) translateY(10px);
     transition: .4s;
 }
 
@@ -1005,16 +1005,20 @@ iframe{
 }
 
 .apply-content h2 span{
-    color:var(--blue);
+    color:#3b205d;
 }
 .apply-body{
-    background-color: var(--blue);
+    background:url(../img/apply-bg.webp);
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 1rem
 }
+
 .apply-box-container{
     display: flex;
     flex-direction:column;
@@ -1097,7 +1101,7 @@ iframe{
 
 .apply-body .btn{
     color: var(--text-color);
-    background-color: #06486a;
+    background-color: var(--blue);
     padding: 10px;
     border-radius: 10px;
     font-size: 13px;
@@ -1164,7 +1168,13 @@ iframe{
         left: 0;
         background-color: var(--bg-color);
         padding: 10px;
+        overflow-y: scroll;
+
     }
+
+    .header .navbar.active::-webkit-scrollbar{
+        display: none;
+      }
 
   
 
@@ -1195,6 +1205,12 @@ iframe{
         display: none;
         position: static;
         width: 100%;
+        height: 150px;
+        overflow-y: auto;
+      }
+
+      .dropdown-content::-webkit-scrollbar{
+        display: none;
       }
      
     .advise-btn{
