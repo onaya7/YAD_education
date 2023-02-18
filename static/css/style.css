@@ -81,6 +81,7 @@ header{
 
 p{
    line-height: 2;
+   font-size:13px
 }
 
 .logo{
@@ -350,7 +351,7 @@ h2{
 }
 
 section{
-    padding:3% 10%;
+    padding:5% 10%;
 }
 
 .home{
@@ -994,7 +995,7 @@ iframe{
 
 .apply-content p{
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color);
 }
 .apply-content h2{
@@ -1012,7 +1013,6 @@ iframe{
 .apply-box-container{
     display: flex;
     flex-direction:column;
-    align-items: center;
     width: 100%;
     gap: 10px;
 }
@@ -1090,7 +1090,7 @@ iframe{
     
 }
 
-.apply-box-container .advise-btn{
+.apply-box-container .btn{
     color: var(--text-color);
     background-color: #06486a;
     padding: 10px;
@@ -1102,6 +1102,13 @@ iframe{
     justify-content: center;
     gap: 10px;
 }
+
+.apply-box-container .btn:hover{
+    transform: scale(1.1) translateY(5px);
+    transition: .4s;
+}
+
+
 
 /* HOW TO APPLY PAGE END */
 
@@ -1170,12 +1177,7 @@ iframe{
     gap: 2px;
     font-size: 10px;
    }
-   /* .navbar .dropdown .dropdown-content  a {
-    font-size: 12px;
-    padding: 8px;
-    display: inline-flex;
 
-   } */
     .dropdown {
         position: static;
         display: flex;
@@ -1189,11 +1191,7 @@ iframe{
         position: static;
         width: 100%;
       }
-      /* .dropdown:hover .dropdown-content {
-        display: block;
-        
-      } */
-
+     
     .advise-btn{
         width: 100%;
     }
@@ -1204,6 +1202,7 @@ iframe{
         justify-content: center;
         text-align: center;
         margin-top: 10%;
+        height: 90vh;
     }
     
     .col{
@@ -1224,19 +1223,7 @@ iframe{
         /* height: 80px; */
     }
   
-    
-    /* .navbar{
-        position: absolute;
-        top: 95%;
-        left: -100%;
-        width: 280px;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: var(--bg-color);
-        transition: all .45s ease;
-        } */
+
 
     .main{
         align-items: center;
@@ -1271,8 +1258,9 @@ iframe{
         text-align: center;
         font-size: 13px;
         padding: 15px 20px;
-        width: 150px
+        width: 150px;
     }
+
     .testimonial-body{
         margin-top: 30%;
         margin-bottom:20px;
@@ -1392,7 +1380,13 @@ iframe{
         font-size: 20px;
     }
 
+    .apply-content h2{
+        font-size: 20px;
+    }
 
+    .apply-content p{
+            font-size: 13px;
+    }
 }
 
 
