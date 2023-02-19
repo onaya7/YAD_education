@@ -1506,6 +1506,15 @@ iframe{
     
 }
 
+.flip{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding:5%  0;
+}
+
     .col{
         width: 50%;
         
