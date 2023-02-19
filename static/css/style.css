@@ -158,7 +158,7 @@ button[type="submit"]{
     justify-content: stretch;
     align-items: center;
     text-align: center;
-    gap:0.5rem;
+    gap:10px;
  
 }
 
@@ -232,6 +232,7 @@ button[type="submit"]{
     border-radius: 10px;
     font-size: 12px;
     text-transform: capitalize;
+    width: 100px;
 }
 
 
@@ -1006,7 +1007,8 @@ iframe{
 }
 
 .apply-content h2 span{
-    color:var(--blue);
+    color:#ffe1658a;
+    font-weight: 600;
 }
 .apply-body{
     background-color: var(--blue);
@@ -1098,7 +1100,7 @@ iframe{
 
 .apply-body .btn{
     color: var(--text-color);
-    background-color: #06486a;
+    background-color: #ffe1658a;
     padding: 10px;
     border-radius: 10px;
     font-size: 13px;
