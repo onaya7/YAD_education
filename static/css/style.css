@@ -1208,9 +1208,12 @@ iframe{
 .accomodation-details ul{
     line-height: 2;
 }
-
+h5{
+    font-size: 1rem;
+    font-weight: 500;
+}
 .accomodation-details li{
-    font-size: 10px;
+    font-size: 0.9rem;
 }
 
 .accomodation-body h3::before{
@@ -1250,7 +1253,7 @@ iframe{
 }
 
 .accomodation-container p{
-    font-size: 12px;
+    font-size: 1rem;
     color: var(--black);
     letter-spacing: 0.5px;
     text-align: left;
@@ -1266,7 +1269,6 @@ iframe{
 }
 .accomodation-body h4{
     color: var(--dark-grey);
-    font-weight: 500;
     font-size: 20px;
     line-height: 43px;
     position: relative;
@@ -1322,7 +1324,7 @@ iframe{
 .formbold-form-label {
     display: block;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     color: #07074d;
     padding: 12px;
   }
@@ -1338,7 +1340,7 @@ iframe{
     border: 1px solid #e0e0e0;
     background: white;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     color: #6b7280;
     outline: none;
     resize: none;
@@ -1348,6 +1350,9 @@ iframe{
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
 
+  select{
+    width: 100%;
+  }
   .formbold-btn {
     text-align: center;
     font-size: 16px;
@@ -1359,32 +1364,13 @@ iframe{
     color: white;
     width: 100%;
     cursor: pointer;
+    margin-top: 12px;
   }
   .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
 
-  .formbold--mx-3 {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-  .formbold-px-3 {
-   padding: 12px;
-  }
-  .flex {
-    display: flex;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .w-full {
-    width: 100%;
-  }
-  @media (min-width: 540px) {
-    .sm\:w-half {
-      width: 50%;
-    }
-  }
+ 
 
 
 
@@ -1697,7 +1683,11 @@ iframe{
     font-size: 20px;
 }
 .visas-container p, .accomodation-container p{
-    font-size: 10px;
+    font-size: 0.7rem;
+}
+
+.accomodation-details li {
+    font-size: 0.6rem;
 }
 
     .apply-content h2{
