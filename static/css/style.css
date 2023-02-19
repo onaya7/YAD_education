@@ -179,7 +179,7 @@ button[type="submit"]{
     font-size: 10px;
     line-height: 16px;
     color: var(--black);
-    transition: all .35s ease;
+    transition: all .20s ease;
     width: 100%;
     padding: 9px 5px;
 }
