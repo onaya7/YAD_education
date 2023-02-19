@@ -1171,14 +1171,14 @@ iframe{
 }
 
 .visas-container p{
-    font-size: 12px;
+    font-size: 0.9rem;
     color: var(--black);
     letter-spacing: 0.5px;
     text-align: left;
 }
 
 .visas-container p span{
-    font-size: 12px;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
@@ -1682,7 +1682,7 @@ h5{
 .visas-body h3, .accomodation-body h3, .advise-body h3{
     font-size: 20px;
 }
-.visas-container p, .accomodation-container p{
+.visas-container p,.visas-container p span, .accomodation-container p{
     font-size: 0.7rem;
 }
 
