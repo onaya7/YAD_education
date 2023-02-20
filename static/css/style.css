@@ -139,6 +139,8 @@ p{
 }
 
 
+
+
 button[type="submit"]{
     background-image: url(../img/search.png);
     background-repeat: no-repeat;
@@ -695,6 +697,7 @@ section{
     width: 100%;
     box-shadow: none;
     background-color: var(--blue);
+    border-radius: 10px;
 }
 
 .search-bar  input{
@@ -708,7 +711,7 @@ section{
 }
 
 .search-bar input::placeholder{
-    color:var(--bg-color);
+    color:#6b7280;
 }
 
 .card-container{
@@ -718,6 +721,10 @@ section{
 }
 
 .card{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 2rem;
     width: 100%;
     height: 400px;
     background: #FFFFFF;
@@ -759,7 +766,7 @@ section{
     color: var(--light-grey);
     font-size: 15px;
     font-weight: 600;
-    padding: 30px 0;
+    padding: 10px;
 }
 
 .card-container .card a{
@@ -774,179 +781,9 @@ section{
     font-size: 12px;
     color:black;
 }
-
-
-
-
-
 /* UNIVERSITY PAGE END */
 
 /* ------------------------------------------------------------------------------ */
-/* UNIVERSITY ABOUT PAGE */
-.about{
-    position: relative;    
-    width: 100%;
-    height: 60vh;
-
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height:60vh;
-    background-color: #1f1a1a75;
-}
-
-.about img{
-    width: 100%;
-    height: 100%;
-
-}
-
-.about-img{
-    width: 150px;
-    height: 50px;
-    
-}
-
-.about-img img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.about-container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform:translate(-50%, -50%);
-    width: 100%;
-    padding: 10%;
-}
-
-.about-content{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-}
-
-.about-content h2{
-    color: var(--bg-color);
-    font-size: 50px;
-    font-weight: 700;
-}
-
-.socials{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 200px;
-}
- .socials span{
-    font-size:1.5rem;
-    color: var(--bg-color);
-    height: 40px;
-    width: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 2px solid var(--blue);
-    transition: all .35s ease;
- }
-
-.socials span:hover{
-    transform: scale(1.04) translateY(5px);
-    background-color: var(--blue);
-}
-.about-body, .about-video{
-    background-color: #E2E2E2;
-}
-.about-body h2, .about-video h2{
-    color: var(--dark-grey);
-    font-weight: 500;
-    font-size: 25px;
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.about-body h2::before, .about-video h2::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 50px;
-    left: 0;
-    bottom: -10px;
-    background: var(--blue);
-}
-
-.about-text{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    background-color: var(--bg-color);
-    border-radius: 10px;
-    padding: 5% 20px;
-}
-
-
-.about-text span{
-    display:flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.about-text span i{
-    color: var(--black);
-}
-.about-text p{
-    font-size: 12px;
-    color: var(--black);
-    letter-spacing:0.5px;
-    text-align: left;
-    
-}
-
-.about-text p::selection{
-    color: var(--blue);
-}
-
-.video-body{
-    width: 100%;
-    background-color: var(--bg-color);
-    border-radius: 10px;
-    padding: 5% 20px;
-}
-
-
-.video{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 250px;
-    border-radius: 20px;
-    
-
-}
-
-iframe{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* UNIVERSITY ABOUT PAGE  END*/
 
 /* ------------------------------------------------------------------------------- */
 
@@ -1380,9 +1217,7 @@ h5{
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
 
- input{
-    
- }
+
 
 
 
@@ -1677,17 +1512,6 @@ h5{
 
     .uni-text a{
         font-size: 9px;
-    }
-
-    /* about */
-    .about-container{
-        transform: translate(-50%, -45%);
-    }
-    .about-body h2{
-        font-size: 25px;
-    }
-    .about-content h2 {
-        font-size: 20px;
     }
 
     
