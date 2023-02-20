@@ -35,8 +35,8 @@ menu.onclick = () => {
 
 
 window.onscroll = () => { 
-    // menu.classList.remove('bx-x');
-    // // navbar.classList.remove('active');
+    menu.classList.remove('bx-x');
+     navbar.classList.remove('active');
 };
 
 
@@ -57,3 +57,26 @@ function search() {
   }
   }
   }
+
+// emailjs
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_gxs2ulj';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Book Appointment';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Book Appointment';
+      alert(JSON.stringify(err));
+    });
+});
