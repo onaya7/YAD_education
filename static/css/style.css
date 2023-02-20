@@ -1351,7 +1351,7 @@ h5{
   }
 
   select{
-    width: 100%;
+     width: 100%;
     padding: 12px 24px;
     border-radius: 6px;
     border: 1px solid #e0e0e0;
@@ -1374,12 +1374,15 @@ h5{
     width: 100%;
     cursor: pointer;
     margin-top: 12px;
+    display: block;
   }
   .formbold-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
 
- 
+ input{
+    
+ }
 
 
 

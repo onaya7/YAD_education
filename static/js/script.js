@@ -61,6 +61,7 @@ function search() {
 // emailjs
 
 const btn = document.getElementById('button');
+console.log(btn.value)
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
@@ -74,7 +75,7 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Book Appointment';
-      alert('Sent!');
+      alert('Message Sent!');
     }, (err) => {
       btn.value = 'Book Appointment';
       alert(JSON.stringify(err));
