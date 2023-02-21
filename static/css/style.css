@@ -848,7 +848,7 @@ section{
 }
 
 .apply-content h2 span{
-    color:#ffe1658a;
+    color:#6a64f1;
     font-weight: 600;
 }
 .apply-body{
@@ -941,7 +941,7 @@ section{
 
 .apply-body .btn{
     color: var(--text-color);
-    background-color: #ffe1658a;
+    background-color: #6a64f1;
     padding: 10px;
     border-radius: 10px;
     font-size: 13px;
@@ -1226,6 +1226,96 @@ h5{
 /* 
 
 
+
+/* CONTACT US PAGE START */
+.contact-body h3{
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    position: relative;
+    margin-bottom:30px;
+}
+
+.contact-body h3::before{
+     content: "";
+    position: absolute;
+    height: 2px;
+    width: 59px;
+    left: 0;
+    bottom: -20px;
+    background: var(--blue);
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding:5%  0;
+    
+}
+
+
+.contact-left, .contact-right{
+    width: 100%;
+    height: auto;
+}
+
+
+.contact-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.content{
+    color: var(--dark-grey);
+    display: flex;
+    gap: 1rem;
+}
+.content-text{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.content p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content a{
+    color: var(--blue);
+    font-size: 1rem;
+}
+
+.content i{
+    padding: 20px;
+    color: var(--bg-color);
+    background-color: var(--blue);
+    border-radius: 50%;
+}
+
+/* CONTACT US  END */
+/* ----------------------------------------------------------------------------- */
+/* 
+
+
+
 ------------------------------------------------------------------------------- */
   /* large screen size : from 1140px to 1560px */
 
@@ -1418,9 +1508,9 @@ h5{
 
  
       .apply-box{
-        height: 600px;
-        width:100%;
-        border-radius: 100% 0% 100% 0% / 31% 64% 36% 69% ;
+        height: 450px;
+        width: 100%;
+        border-radius: 30px;
       }
 
 
@@ -1441,6 +1531,10 @@ h5{
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    }
+
+     .apply-content h2{
+        font-size: 2rem;
     }
 }
 /* small phone screen : from 0 to 575px */
@@ -1527,7 +1621,7 @@ h5{
 }
 
     .apply-content h2{
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 
     .apply-content p{
