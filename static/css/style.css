@@ -184,6 +184,7 @@ button[type="submit"]{
     transition: all .20s ease;
     width: 100%;
     padding: 9px 5px;
+    transition: .30s all ease-in;
 }
 .navbar li a:hover{
     color: var(--bg-color);
@@ -362,7 +363,7 @@ section{
     background-color: #E2E2E2;
 }
 
-.home h2{
+.home h2, .university h2{
     color: var(--dark-grey);
     font-weight: 500;
     font-size: 35px;
@@ -371,13 +372,13 @@ section{
     margin-bottom:30px;
 }
 
-.home h2::before {
+.home h2::before , .university h2::before{
     content: "";
     position: absolute;
     height: 2px;
     width: 59px;
     left: 0;
-    bottom: -50px;
+    bottom: -20px;
     background: var(--blue);
 }
 
@@ -438,7 +439,54 @@ section{
 .home .container .card-text h3 {
     font-weight: 700;
  }
- 
+ /* university section*/
+.university-body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1rem;
+    margin-top: 10%;
+}
+
+.uni-card{
+    position: relative;
+    color: var(--bg-color);
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    transition: .4s all ease-in;
+}
+
+.uni-card:hover {
+    transform: scale(1.04) translateY(-5px);
+}
+
+.uni-card .card-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    display: flex;
+    align-items: flex-end;
+    background-color: #00000082;
+    border-radius: 20px;
+}
+
+.card-text h4{
+   font-size: 1rem;
+}
+.uni-img{
+    width: 100%;
+    height:100%;
+}
+ .uni-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
 /* Testimonial section */
  .testimonial{
     background-color: var(--blue);
@@ -465,7 +513,7 @@ section{
     height: 2px;
     width: 59px;
     left: 0;
-    bottom: -50px;
+    bottom: -20px;
     background: var(--bg-color);
 }
 
@@ -731,6 +779,7 @@ section{
     border-radius: 20px;
     transition: all .35s ease;
     text-align: center;
+    box-shadow: 20px 20px 20px #0000001a;
 }
 
 .card:hover{
@@ -792,7 +841,7 @@ section{
 .apply{
     position: relative;    
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 
 }
 
@@ -801,7 +850,7 @@ section{
     top: 0;
     left: 0;
     width: 100%;
-    height:60vh;
+    height:50vh;
     background-color: #1135489e;
 }
 
@@ -1281,7 +1330,7 @@ h5{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 .content{
     color: var(--dark-grey);
@@ -1293,18 +1342,16 @@ h5{
     align-items: flex-start;
     flex-direction: column;
 }
-.content p{
+
+
+.content p, .content a{
+    color: var(--blue);
     font-size: 1rem;
     font-weight: 500;
 }
 
-.content a{
-    color: var(--blue);
-    font-size: 1rem;
-}
-
-.content i{
-    padding: 20px;
+.icon i {
+    padding: 10px;
     color: var(--bg-color);
     background-color: var(--blue);
     border-radius: 50%;
@@ -1584,12 +1631,12 @@ h5{
         padding: 15px 10px;
     }
 
-    .home h2{
-        font-size:20px;
+    .home h2, .testimonial h2, .university h2{
+        font-size:16px;
     }
 
-    .testimonial h2{
-        font-size:20px;
+    .slide p {
+        font-size: 12px;
     }
     .col{
         width: 100%;
@@ -1609,7 +1656,7 @@ h5{
     }
 
     
-.visas-body h3, .accomodation-body h3, .advise-body h3{
+.visas-body h3, .accomodation-body h3, .advise-body h3, .contact-body h3{
     font-size: 20px;
 }
 .visas-container p,.visas-container p span, .accomodation-container p{
@@ -1626,6 +1673,12 @@ h5{
 
     .apply-content p{
             font-size: 10px;
+    }
+
+    .content p, .content a{
+      
+        font-size: 0.65rem;
+       
     }
 }
 
