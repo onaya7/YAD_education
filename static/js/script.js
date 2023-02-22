@@ -59,26 +59,29 @@ function search() {
   }
 
 // emailjs
+const form = document.getElementById('form');
 
-const btn = document.getElementById('button');
-console.log(btn.value)
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+  // // Validate form fields
+  // if (!form.checkValidity()) {
+  //   alert('Please fill out all required fields.');
+  //   return;
+  // }
 
-   btn.value = 'Sending...';
+const serviceID = 'default_service';
+const templateID = 'template_bbgv1xg';
 
-   const serviceID = 'default_service';
-   const templateID = 'template_bbgv1xg';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Book Appointment';
-      alert('Message Sent!');
-    }, (err) => {
-      btn.value = 'Book Appointment';
-      alert(JSON.stringify(err));
+  // Send email using emailjs
+  emailjs.sendForm(serviceID, templateID, form)
+    .then((response) => {
+      alert('Message sent successfully!');
+      form.reset();
+    }, (error) => {
+      alert('Message failed to send. Please try again later.');
     });
 });
+
+
 
