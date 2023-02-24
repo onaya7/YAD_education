@@ -59,29 +59,27 @@ function search() {
   }
 
 // emailjs
-const form = document.getElementById('form');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // // Validate form fields
-  // if (!form.checkValidity()) {
-  //   alert('Please fill out all required fields.');
-  //   return;
-  // }
-
-const serviceID = 'default_service';
+function sendMail(){
+  var params = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    country: document.getElementById("country").value,
+    course: document.getElementById("course").value,
+    comment: document.getElementById("comment").value,
+  };
+console.log(email)
+console.log(course)
+ const serviceID = 'default_service';
 const templateID = 'template_bbgv1xg';
 
   // Send email using emailjs
-  emailjs.sendForm(serviceID, templateID, form)
+  emailjs.send(serviceID, templateID, params)
     .then((response) => {
       alert('Message sent successfully!');
-      form.reset();
     }, (error) => {
       alert('Message failed to send. Please try again later.');
     });
-});
-
-
+}
 
