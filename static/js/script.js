@@ -69,8 +69,7 @@ function sendMail(){
     course: document.getElementById("course").value,
     comment: document.getElementById("comment").value,
   };
-console.log(email)
-console.log(course)
+
  const serviceID = 'default_service';
 const templateID = 'template_bbgv1xg';
 
@@ -78,6 +77,7 @@ const templateID = 'template_bbgv1xg';
   emailjs.send(serviceID, templateID, params)
     .then((response) => {
       alert('Message sent successfully!');
+      console.log(response)
     }, (error) => {
       alert('Message failed to send. Please try again later.');
     });
